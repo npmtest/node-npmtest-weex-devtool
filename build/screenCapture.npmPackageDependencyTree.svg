@@ -315,7 +315,7 @@
 <tspan x="10" y="5002">  │ │   │   │ └── is-posix-bracket@0.1.1 </tspan>
 <tspan x="10" y="5018">  │ │   │   ├── extglob@0.3.2 </tspan>
 <tspan x="10" y="5034">  │ │   │   ├── filename-regex@2.0.0 </tspan>
-<tspan x="10" y="5050">  │ │   │   ├── kind-of@3.1.0 </tspan>
+<tspan x="10" y="5050">  │ │   │   ├── kind-of@3.2.0 </tspan>
 <tspan x="10" y="5066">  │ │   │   ├─┬ normalize-path@2.1.1 </tspan>
 <tspan x="10" y="5082">  │ │   │   │ └── remove-trailing-separator@1.0.1 </tspan>
 <tspan x="10" y="5098">  │ │   │   ├─┬ object.omit@2.0.1 </tspan>
