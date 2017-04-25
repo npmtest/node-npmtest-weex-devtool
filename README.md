@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-weex-devtool/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-weex-devtool/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-weex-devtool/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-weex-devtool/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-weex-devtool/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-weex-devtool/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-weex-devtool/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-weex-devtool/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-weex-devtool/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-weex-devtool/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-weex-devtool/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-weex-devtool/build/coverage.html/index.html)
 
@@ -35,28 +35,25 @@
 ```json
 
 {
-    "name": "weex-devtool",
-    "description": "weex developer tool for debugging weex app with chrome devtool",
-    "version": "0.2.80",
-    "author": "exolution <exolution@163.com>",
-    "license": "GPL-3.0",
-    "main": "index.js",
-    "keywords": [
-        "weex",
-        "debugger",
-        "inspector",
-        "devtool"
-    ],
-    "scripts": {
-        "prepublish": "node_modules/babel-cli/bin/babel.js src --out-dir lib"
+    "author": {
+        "name": "exolution"
     },
-    "devDependencies": {
-        "babel-cli": "^6.10.1",
-        "babel-core": "^6.10.4",
-        "babel-loader": "^6.2.4",
-        "babel-preset-es2015": "^6.9.0",
-        "babel-plugin-transform-runtime": "^6.7.5",
-        "eslint": "^2.13.1"
+    "babel": {
+        "presets": [
+            "es2015"
+        ],
+        "plugins": [
+            [
+                "transform-runtime",
+                {
+                    "polyfill": false,
+                    "regenerator": true
+                }
+            ]
+        ]
+    },
+    "bin": {
+        "weex-devtool": "bin/weex-devtool.js"
     },
     "dependencies": {
         "babel-core": "^6.10.4",
@@ -84,23 +81,40 @@
         "weex-loader": "^0.4.2-beta",
         "weex-transformer": "^0.3.1"
     },
-    "bin": {
-        "weex-devtool": "bin/weex-devtool.js"
+    "description": "weex developer tool for debugging weex app with chrome devtool",
+    "devDependencies": {
+        "babel-cli": "^6.10.1",
+        "babel-core": "^6.10.4",
+        "babel-loader": "^6.2.4",
+        "babel-plugin-transform-runtime": "^6.7.5",
+        "babel-preset-es2015": "^6.9.0",
+        "eslint": "^2.13.1"
     },
-    "babel": {
-        "presets": [
-            "es2015"
-        ],
-        "plugins": [
-            [
-                "transform-runtime",
-                {
-                    "polyfill": false,
-                    "regenerator": true
-                }
-            ]
-        ]
-    }
+    "directories": {},
+    "dist": {
+        "shasum": "308686ff9fb1433b04462451360b0fd09559543f",
+        "tarball": "https://registry.npmjs.org/weex-devtool/-/weex-devtool-0.2.80.tgz"
+    },
+    "gitHead": "a67317266d495f2455c3fd6dfcd1ddc7bf840453",
+    "keywords": [
+        "weex",
+        "debugger",
+        "inspector",
+        "devtool"
+    ],
+    "license": "GPL-3.0",
+    "main": "index.js",
+    "maintainers": [
+        {
+            "name": "exolution"
+        }
+    ],
+    "name": "weex-devtool",
+    "optionalDependencies": {},
+    "scripts": {
+        "prepublish": "node_modules/babel-cli/bin/babel.js src --out-dir lib"
+    },
+    "version": "0.2.80"
 }
 ```
 
